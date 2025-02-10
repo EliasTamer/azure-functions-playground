@@ -7,9 +7,5 @@
   },
   "dependencies": {
     "uuid": "^9.0.1"
-  },
-  "main": "index.js",
-  "author": "",
-  "license": "ISC",
-  "description": ""
+  }
 }
