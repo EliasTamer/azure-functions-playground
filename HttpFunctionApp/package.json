@@ -1,0 +1,15 @@
+{
+  "name": "httpfunctionapp",
+  "version": "1.0.0",
+  "scripts": {
+    "start": "func start",
+    "test": "echo \"No tests yet...\""
+  },
+  "dependencies": {
+    "uuid": "^9.0.1"
+  },
+  "main": "index.js",
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
