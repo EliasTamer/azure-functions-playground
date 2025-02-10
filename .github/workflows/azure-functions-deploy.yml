@@ -7,7 +7,7 @@ on:
   workflow_dispatch:
 
 env:
-  AZURE_FUNCTIONAPP_NAME: jarvis-function
+  AZURE_FUNCTIONAPP_NAME: jarvis-fapp
   NODE_VERSION: '20.x'
   WORKING_DIRECTORY: HttpFunctionApp
 
