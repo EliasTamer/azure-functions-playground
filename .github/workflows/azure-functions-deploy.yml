@@ -3,12 +3,13 @@ name: Deploy Azure Functions
 on:
   push:
     branches:
-      - master
+      - main
   workflow_dispatch:
 
 env:
   AZURE_FUNCTIONAPP_NAME: jarvis-function
   NODE_VERSION: '20.x'
+  WORKING_DIRECTORY: HttpFunctionApp    # Add this to specify the function app folder
 
 jobs:
   build-and-deploy:
@@ -24,6 +25,7 @@ jobs:
 
     - name: Install dependencies
       run: |
+        cd ${{ env.WORKING_DIRECTORY }}
         npm install
         
     - name: 'Deploy to Azure Functions'
@@ -31,3 +33,4 @@ jobs:
       with:
         app-name: ${{ env.AZURE_FUNCTIONAPP_NAME }}
         publish-profile: ${{ secrets.AZURE_FUNCTIONAPP_PUBLISH_PROFILE }}
+        package: ${{ env.WORKING_DIRECTORY }}
